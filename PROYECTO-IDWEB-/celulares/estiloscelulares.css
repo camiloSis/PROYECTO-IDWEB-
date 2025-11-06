@@ -1,0 +1,111 @@
+
+body {
+    font-family: Verdana, sans-serif;
+    line-height: 1.5;
+    background-color: #f8f8f8;
+    color: #000000;
+    padding-bottom: 40px;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(19, 108, 224);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+header {
+    background-color: #3c6ed1;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding-top: 10px;
+}
+
+nav ul a {
+    display: inline-block;
+    padding: 8px 15px;
+    color: #333;
+    text-decoration: none;
+    background-color: #ccc;
+    margin: 0 5px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+article {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+.especificaciones {
+    margin-top: 30px;
+    padding: 015px;
+    background-color: #e8f0ff;
+    border-radius: 4px;
+}
+
+.especificaciones h3 {
+    color: #1a4d9c;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.especificaciones ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.especificaciones li {
+    padding: 5px 0;
+    border-bottom: 1px dotted #ccc;
+}
+article.producto { 
+    margin-bottom: 30px;
+    border: 1px solid #cce;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+.enlaces-compra {
+    margin-top: 30px;
+    padding: 015px;
+    background-color: #d9f1ff;
+    border-radius: 4px;
+}
+.enlaces-compra h3 {
+    color: #1a4d9c;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+.enlaces-compra ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+.enlaces-compra a {
+    padding: 5px 0;
+    text-decoration:none;
+    border-bottom: 1px dotted #ccc;
+}
