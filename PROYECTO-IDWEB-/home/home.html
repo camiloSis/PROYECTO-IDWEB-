@@ -1,55 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Pagina grupal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex Tech - Tecnología de Vanguardia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estiloshome.css">
 </head>
 <body>
-    <header>
-        <h1>Vortex Tech</h1>
-        <nav>
+    <header class="main-header">
+        <div class="logo">Vortex<span class="logo-pro">Tech</span></div>
+        <nav class="main-nav">
             <ul>
-                <a href="home.html">Home</a>
-                <a href="../celulares/celulares.html">Celulares</a>
-                <a href="../televisores/televisores.html">Televisores</a>
-                <a href="../laptops/laptops.html">Laptops</a>
-                <a href="../tablets/tablets.html">Tablets</a>
+                <li><a href="home.html" class="active">Inicio</a></li>
+                <li><a href="../celulares/celulares.html">Celulares</a></li>
+                <li><a href="../televisores/televisores.html">Televisores</a></li>
+                <li><a href="../laptops/laptops.html">Laptops</a></li>
+                <li><a href="../tablets/tablets.html">Tablets</a></li>
+                <li><a href="#about">Quiénes Somos</a></li>
             </ul>
         </nav>
+        <a href="#productos" class="header-cta-button">Ver Catálogo Completo</a>
     </header>
-    <main>
-        <article>
-            <div #about>
-        <h2>Bienvenidos a Vortex Tech</h2>
-        <h3>Quienes somos</h3>
-        <p>Somos una empresa dedicada a la venta de productos tecnologicos de alta calidad, ofreciendo una amplia gama de dispositivos para satisfacer las necesidades de nuestros clientes.</p>
-        <h3>Nuestra Mision</h3>
-        <p>Nuestra mision es proporcionar productos tecnologicos innovadores y de vanguardia, brindando a nuestros clientes la mejor experiencia en tecnologia.</p>
-        <h3>Nuestra Vision</h3>
-        <p>Nuestra vision es ser reconocidos como una empresa lider en el mercado de productos tecnologicos, destacandonos por nuestra calidad, servicio al cliente y compromiso con la innovacion.</p>
+
+    <section class="hero-section hero-home">
+        <div class="hero-content">
+            <h1>Tecnología en Tendencia y Soluciones de Vanguardia</h1>
+            <p>Descubre los últimos dispositivos del mercado. Primero pruebas el futuro, y luego decides. ¡Así de sencillo!</p>
+            <div class="hero-buttons">
+                <a href="#oferta" class="cta-primary"> Ver Ofertas Destacadas</a>
+            </div>
         </div>
-        </article>
-        <article>
-        <h2>Productos Destacados</h2>
-        <h3>Celulares</h3>
-        <img src="celularestendencia.jpg" alt="Celulares">
-        <p>Ofrecemos una amplia variedad de celulares de las marcas mas reconocidas, con las ultimas tecnologias y caracteristicas avanzadas.</p>
-        </article>
-        <article>
-        <h3>Televisores</h3>
-        <img src="televisorestendencia.avif" alt="Televisores">
-        <p>Nuestros televisores cuentan con resoluciones impresionantes, calidad de imagen excepcional y funciones inteligentes para una experiencia de entretenimiento inigualable.</p>
-        </article>
-        <article>
-        <h3>Laptops</h3>
-        <img src="laptopstendencia.jpg" alt="Laptops">
-        <p>Nuestras laptops son potentes, portatiles y diseñadas para satisfacer las necesidades de profesionales, estudiantes y entusiastas de la tecnologia.</p>
-        </article>
-        <article>
-        <h3>Tablets</h3>
-        <img src="tabletstendencia.avif" alt="Tablets">
-        <p>Nuestras tablets combinan portabilidad y rendimiento, ofreciendo una experiencia versatil para el trabajo, el estudio y el entretenimiento.</p>
-        </article>
+    </section>
+
+    <main>
+
+        <section class="productos-destacados" id="productos">
+            <h2>Productos Destacados en Tendencia</h2>
+            <div class="productos-grid">
+                
+                <article class="producto-card">
+                    <div class="card-image-container"><img src="celularestendencia.jpg" alt="Celulares en tendencia" loading="lazy"></div>
+                    <div class="card-content">
+                        <h3>Celulares</h3>
+                        <p>Amplia variedad de celulares con las últimas tecnologías y características avanzadas. ¡Descubre el futuro en tus manos!</p>
+                    </div>
+                </article>
+                
+                <article class="producto-card">
+                    <div class="card-image-container"><img src="televisorestendencia.avif" alt="Televisores inteligentes" loading="lazy"></div>
+                    <div class="card-content">
+                        <h3>Televisores</h3>
+                        <p>Resoluciones impresionantes y calidad de imagen excepcional para una experiencia de entretenimiento inigualable en tu hogar.</p>
+                    </div>
+                </article>
+                
+                <article class="producto-card">
+                    <div class="card-image-container"><img src="laptopstendencia.jpg" alt="Laptops potentes y portátiles" loading="lazy"></div>
+                    <div class="card-content">
+                        <h3>Laptops</h3>
+                        <p>Potentes, portátiles y diseñadas para satisfacer las necesidades de profesionales y entusiastas de la tecnología. ¡Rendimiento sin límites!</p>
+                    </div>
+                </article>
+                
+                <article class="producto-card">
+                    <div class="card-image-container"><img src="tabletstendencia.avif" alt="Tablets versátiles" loading="lazy"></div>
+                    <div class="card-content">
+                        <h3>Tablets</h3>
+                        <p>Combinan portabilidad y rendimiento, ofreciendo una experiencia versátil para el trabajo, el estudio y el entretenimiento.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="about" class="info-section">
+            <h2>¿Quiénes Somos?</h2>
+            <div class="about-container">
+                <article class="info-card">
+                    <h3>Vortex Tech</h3>
+                    <p>Somos una empresa dedicada a la venta de productos tecnológicos de alta calidad, ofreciendo una amplia gama de dispositivos para satisfacer las necesidades de nuestros clientes, garantizando siempre la mejor relación calidad-precio.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Nuestra Misión</h3>
+                    <p>Proporcionar productos tecnológicos innovadores y de vanguardia, brindando a nuestros clientes la mejor experiencia en tecnología a través de un servicio excepcional y soluciones personalizadas.</p>
+                </article>
+                <article class="info-card">
+                    <h3>Nuestra Visión</h3>
+                    <p>Ser reconocidos como una empresa líder en el mercado tecnológico a nivel regional, destacándonos por nuestra calidad, servicio al cliente y compromiso inquebrantable con la innovación.</p>
+                </article>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Vortex Tech. Todos los derechos reservados.</p>
+        <p>Contacto: info@vortextech.com | Términos y Condiciones</p>
+    </footer>
 </body>
 </html>
