@@ -22,7 +22,14 @@ main {
     border: 1px solid #ddd;
     border-radius: 8px;
 }
-
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.logo-pro {
+    color: #00C6FF;
+}
 header {
     background-color: #3c6ed1;
     color: white;
