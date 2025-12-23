@@ -17,38 +17,58 @@
                 <li><a href="../televisores/televisores.html">Televisores</a></li>
                 <li><a href="../laptops/laptops.html">Laptops</a></li>
                 <li><a href="../tablets/tablets.html">Tablets</a></li>
-                <li><a href="login.html" class="active">Login</a></li>
+                <li id="auth-section"><a href="login.html" class="active">Login</a></li>
             </ul>
         </nav>
-        <a href="../home/home.html#productos" class="header-cta-button">Ver Catálogo</a>
+        <a href="../home/home.html#productos" class="header-cta-button">Ver Ofertas</a>
     </header>
     
     <main class="login-main">
-        <section class="login-section">
-            <div class="login-container">
-                <div id="login-form">
-                    <h2>Iniciar Sesión</h2>
-                    <p>Accede a tu cuenta de Vortex Tech</p>
-                    <form onsubmit="event.preventDefault(); alert('¡Bienvenido!');">
-                        <div class="input-group">
-                            <label>Correo Electrónico</label>
-                            <input type="email" placeholder="ejemplo@correo.com" required>
-                        </div>
-                        <div class="input-group">
-                            <label>Contraseña</label>
-                            <input type="password" placeholder="********" required>
-                        </div>
-                        <button type="submit" class="btn-vortex">Entrar</button>
-                    </form>
-                    <p class="footer-form">¿No tienes cuenta? <a href="#" onclick="alert('Función de registro próximamente')">Crea una aquí</a></p>
-                </div>
+        <div class="login-container">
+            <div id="login-box">
+                <h2>Iniciar Sesión</h2>
+                <p>Accede a tu cuenta de Vortex Tech</p>
+                <form id="form-login">
+                    <div class="input-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" id="login-email" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Contraseña</label>
+                        <input type="password" id="login-pass" required placeholder="********">
+                    </div>
+                    <button type="submit" class="btn-vortex">Entrar</button>
+                </form>
+                <p class="footer-form">¿No tienes cuenta? <a href="#" id="link-registro">Crea una aquí</a></p>
             </div>
-        </section>
+
+            <div id="register-box" style="display: none;">
+                <h2>Crear Cuenta</h2>
+                <p>Regístrate para una experiencia personalizada</p>
+                <form id="form-register">
+                    <div class="input-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" id="reg-nombre" placeholder="Tu nombre real" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" id="reg-email" placeholder="ejemplo@correo.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Contraseña</label>
+                        <input type="password" id="reg-pass" required placeholder="********">
+                    </div>
+                    <button type="submit" class="btn-vortex">Registrarse</button>
+                </form>
+                <p class="footer-form">¿Ya tienes cuenta? <a href="#" id="link-login">Inicia sesión</a></p>
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Vortex Tech. Todos los derechos reservados.</p>
     </footer>
+
     <script src="login.js"></script>
 </body>
 </html>

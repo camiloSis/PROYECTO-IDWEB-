@@ -1,44 +1,94 @@
-// --- LÓGICA DE LOGIN Y REGISTRO VORTEX TECH ---
-
 document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.getElementById('login-form');
-    const registerForm = document.getElementById('register-form');
-    
-    // 1. FUNCIÓN PARA CAMBIAR ENTRE FORMULARIOS
-    // Esta función se activa cuando haces clic en los enlaces de "Regístrate" o "Inicia Sesión"
-    window.toggleForms = function() {
-        if (loginForm.style.display === "none") {
-            loginForm.style.display = "block";
-            registerForm.style.display = "none";
-        } else {
-            loginForm.style.display = "none";
-            registerForm.style.display = "block";
-        }
-    };
+    const loginBox = document.getElementById('login-box');
+    const registerBox = document.getElementById('register-box');
+    const authSection = document.getElementById('auth-section');
 
-    // 2. MANEJO DEL INICIO DE SESIÓN
-    const formLogin = loginForm.querySelector('form');
-    formLogin.addEventListener('submit', (e) => {
-        e.preventDefault(); // Evita que la página se recargue de golpe
-        
-        // Obtenemos el correo para sacar el nombre de usuario
-        const email = loginForm.querySelector('input[type="email"]').value;
-        const nombreUsuario = email.split('@')[0]; // Ejemplo: de 'juan@mail.com' saca 'juan'
+    const linkRegistro = document.getElementById('link-registro');
+    const linkLogin = document.getElementById('link-login');
 
-        // Guardamos el nombre en la memoria del navegador (LocalStorage)
-        localStorage.setItem('usuarioVortex', nombreUsuario);
+    const formRegistro = document.getElementById('form-register');
+    const formLogin = document.getElementById('form-login');
 
-        alert("¡Bienvenido a Vortex Tech, " + nombreUsuario + "!");
-        
-        // Redirigimos al Home (ajusta la ruta según tu carpeta)
-        window.location.href = "../home/home.html";
-    });
+    // --- 1. NAVEGACIÓN ENTRE FORMULARIOS ---
+    if (linkRegistro) {
+        linkRegistro.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginBox.style.display = 'none';
+            registerBox.style.display = 'block';
+        });
+    }
 
-    // 3. MANEJO DEL REGISTRO
-    const formRegister = registerForm.querySelector('form');
-    formRegister.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert("Cuenta creada con éxito. Ahora puedes iniciar sesión.");
-        toggleForms(); // Regresa al formulario de login
-    });
+    if (linkLogin) {
+        linkLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            registerBox.style.display = 'none';
+            loginBox.style.display = 'block';
+        });
+    }
+
+    // --- 2. LÓGICA DE REGISTRO (Guarda credenciales) ---
+    if (formRegistro) {
+        formRegistro.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const nombreUsuario = document.getElementById('reg-nombre').value;
+            const emailUsuario = document.getElementById('reg-email').value;
+            const passUsuario = document.getElementById('reg-pass').value;
+
+            // Creamos un objeto con los datos para validar luego
+            const datosUsuario = {
+                nombre: nombreUsuario,
+                email: emailUsuario,
+                password: passUsuario
+            };
+            
+            // Guardamos el objeto y marcamos la sesión activa
+            localStorage.setItem('usuarioVortex_DB', JSON.stringify(datosUsuario));
+            localStorage.setItem('usuarioVortex', nombreUsuario);
+            
+            alert("¡Registrado exitosamente: " + nombreUsuario + "!");
+            window.location.href = "../home/home.html";
+        });
+    }
+
+    // --- 3. LÓGICA DE INICIO DE SESIÓN (Validación Real) ---
+    if (formLogin) {
+        formLogin.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const emailIngresado = document.getElementById('login-email').value;
+            const passIngresada = document.getElementById('login-pass').value;
+
+            // Recuperamos los datos guardados en el registro
+            const db = JSON.parse(localStorage.getItem('usuarioVortex_DB'));
+
+            // Verificamos si los datos coinciden
+            if (db && emailIngresado === db.email && passIngresada === db.password) {
+                localStorage.setItem('usuarioVortex', db.nombre);
+                alert("¡Bienvenido de nuevo, " + db.nombre + "!");
+                window.location.href = "../home/home.html";
+            } else {
+                // Mensaje de error si falla la validación
+                alert("Error: Correo electrónico o contraseña inválida");
+            }
+        });
+    }
+
+    // --- 4. PERSISTENCIA DE SESIÓN EN EL HEADER ---
+    const usuarioActivo = localStorage.getItem('usuarioVortex');
+    if (usuarioActivo && authSection) {
+        authSection.innerHTML = `
+            <div class="user-pill">
+                <span class="user-name">👤 ${usuarioActivo}</span>
+                <a href="#" class="btn-salir" id="logout-btn">Salir</a>
+            </div>
+        `;
+
+        document.getElementById('logout-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            localStorage.removeItem('usuarioVortex');
+            alert("Sesión cerrada.");
+            window.location.reload();
+        });
+    }
 });
