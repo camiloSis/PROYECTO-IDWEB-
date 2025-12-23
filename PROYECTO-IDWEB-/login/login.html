@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso - Vortex Tech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estiloslogin.css"> 
+</head>
+<body>  
+    <header class="main-header">
+        <div class="logo">Vortex<span class="logo-pro">Tech</span></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../home/home.html">Home</a></li>
+                <li><a href="../celulares/celulares.html">Celulares</a></li>
+                <li><a href="../televisores/televisores.html">Televisores</a></li>
+                <li><a href="../laptops/laptops.html">Laptops</a></li>
+                <li><a href="../tablets/tablets.html">Tablets</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+            </ul>
+        </nav>
+        <a href="../home/home.html#productos" class="header-cta-button">Ver Catálogo</a>
+    </header>
+    
+    <main class="login-main">
+        <section class="login-section">
+            <div class="login-container">
+                <div id="login-form">
+                    <h2>Iniciar Sesión</h2>
+                    <p>Accede a tu cuenta de Vortex Tech</p>
+                    <form onsubmit="event.preventDefault(); alert('¡Bienvenido!');">
+                        <div class="input-group">
+                            <label>Correo Electrónico</label>
+                            <input type="email" placeholder="ejemplo@correo.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Contraseña</label>
+                            <input type="password" placeholder="********" required>
+                        </div>
+                        <button type="submit" class="btn-vortex">Entrar</button>
+                    </form>
+                    <p class="footer-form">¿No tienes cuenta? <a href="#" onclick="alert('Función de registro próximamente')">Crea una aquí</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vortex Tech. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
