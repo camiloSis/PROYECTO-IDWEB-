@@ -1,14 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    const detallesTitulo = document.querySelectorAll('.producto-card .detail-box h3');
-    detallesTitulo.forEach(title => {
-        
-        title.style.cursor = 'pointer'; 
-        title.addEventListener('click', () => {
-            const detailBox = title.closest('.detail-box');     
-            if (detailBox) {
-                detailBox.classList.toggle('is-open');
-            }
-        });
+
+document.querySelectorAll('.producto-card').forEach(tv => {
+    tv.addEventListener('click', () => {
+        const nombre = tv.querySelector('h3').innerText;
+        alert("Para este " + nombre + ", te recomendamos una distancia de visión de 2.5 metros.");
     });
 });
