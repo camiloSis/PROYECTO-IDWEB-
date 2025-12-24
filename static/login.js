@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 2. LÓGICA DE REGISTRO CON FETCH (A Python/Flask) ---
+    // --- 2. LÓGICA DE REGISTRO CON FETCH ---
     if (formRegistro) {
         formRegistro.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -48,9 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const resultado = await respuesta.json();
 
                 if (respuesta.ok) {
-                    alert(resultado.mensaje); // "Registrado exitosamente: Nombre"
+                    alert(resultado.mensaje);
                     localStorage.setItem('usuarioVortex', datos.nombre);
-                    window.location.href = "../home/home.html";
+                    // CAMBIO: Redirección usando la ruta de Flask
+                    window.location.href = "/home"; 
                 } else {
                     alert(resultado.error || "Error al registrar");
                 }
@@ -61,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 3. LÓGICA DE LOGIN CON FETCH (A Python/Flask) ---
+    // --- 3. LÓGICA DE INICIO DE SESIÓN CON FETCH ---
     if (formLogin) {
         formLogin.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -83,9 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (respuesta.ok) {
                     alert("¡Bienvenido de nuevo, " + resultado.nombre + "!");
                     localStorage.setItem('usuarioVortex', resultado.nombre);
-                    window.location.href = "../home/home.html";
+                    // CAMBIO: Redirección usando la ruta de Flask
+                    window.location.href = "/home"; 
                 } else {
-                    // Error: Correo electrónico o contraseña inválida
                     alert(resultado.error);
                 }
             } catch (error) {
