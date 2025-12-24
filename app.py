@@ -4,11 +4,10 @@ import os
 
 app = Flask(__name__)
 
-# --- CONFIGURACIÓN E INICIALIZACIÓN DE LA BASE DE DATOS ---
 def init_db():
     conn = sqlite3.connect('vortex_tech.db')
     cursor = conn.cursor()
-    # Creamos la tabla si no existe
+    
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS usuarios (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -20,10 +19,8 @@ def init_db():
     conn.commit()
     conn.close()
 
-# Ejecutar la creación de la DB al iniciar el script
 init_db()
 
-# --- RUTAS DE NAVEGACIÓN (Para cargar tus HTML) ---
 
 @app.route('/')
 def index():
@@ -50,8 +47,6 @@ def laptops():
 @app.route('/tablets')
 def tablets():
     return render_template('tablets.html')
-
-# --- RUTAS DE LA API (Procesamiento de datos) ---
 
 @app.route('/registro', methods=['POST'])
 def registro():
@@ -80,12 +75,9 @@ def login():
     conn.close()
 
     if usuario:
-        # usuario[0] es el nombre guardado en la DB
         return jsonify({"nombre": usuario[0]}), 200
     else:
         return jsonify({"error": "Correo electrónico o contraseña inválida"}), 401
 
-# --- EJECUCIÓN DEL SERVIDOR ---
 if __name__ == '__main__':
-    # debug=True permite ver cambios en tiempo real sin reiniciar el servidor
     app.run(debug=True, port=5000)
