@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso - Vortex Tech</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estiloslogin.css"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='estiloslogin.css') }}">
 </head>
 <body>  
     <header class="main-header">
@@ -68,7 +68,6 @@
     <footer>
         <p>&copy; 2025 Vortex Tech. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="login.js"></script>
+    <script src="{{ url_for('static', filename='login.js') }}"></script>
 </body>
 </html>

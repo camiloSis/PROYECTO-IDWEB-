@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Televisores de Vanguardia - Vortex Tech</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilostelevisores.css"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilostelevisores.css') }}">
 </head>
 <body>  
     <script href="televisor.js"></script>
@@ -43,7 +43,7 @@
 
                 <article class="producto-card"> 
                     <div class="product-image-container">
-                        <img src="samsung,png.jpeg" alt="Samsung S95D (QD-OLED)">
+                        <img src="/static/samsunggs25ultra.avif" alt="Samsung S95D (QD-OLED)">
                     </div>
                     <div class="card-content">
                         <h3>Samsung S95D (QD-OLED)</h3>
@@ -68,7 +68,7 @@
 
                 <article class="producto-card">
                     <div class="product-image-container">
-                        <img src="LG.png" alt="LG G4 (OLED Evo)">
+                        <img src="/static/LG.png" alt="LG G4 (OLED Evo)">
                     </div>
                     <div class="card-content">
                         <h3>LG G4 (OLED Evo)</h3>
@@ -93,7 +93,7 @@
 
                 <article class="producto-card">
                     <div class="product-image-container">
-                        <img src="Sony.png" alt="Sony Bravia 9 (Mini LED)">
+                        <img src="/static/Sony.png" alt="Sony Bravia 9 (Mini LED)">
                     </div>
                     <div class="card-content">
                         <h3>Sony Bravia 9 (Mini LED)</h3>
@@ -118,7 +118,7 @@
 
                 <article class="producto-card">
                     <div class="product-image-container">
-                        <img src="tcl.in.jpeg" alt="TCL X1K (Mini LED)">
+                        <img src="/static/tcl.in.jpeg" alt="TCL X1K (Mini LED)">
                     </div>
                     <div class="card-content">
                         <h3>TCL X1K (Mini LED)</h3>
@@ -147,6 +147,7 @@
     <footer>
         <p>&copy; 2025 Vortex Tech. Todos los derechos reservados.</p>
     </footer>
-    <script src="televisor.js"></script>
+
+    <script src="{{ url_for('static', filename='televisor.js') }}"></script>
 </body>
 </html>

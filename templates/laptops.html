@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laptops en Tendencia - Vortex Tech</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estiloslaptops.css"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='estiloslaptops.css') }}">
 </head>
 <body>  
     <!-- ======= HEADER ======= -->
@@ -46,7 +46,7 @@
                 <!-- Laptop 1 -->
                 <article class="producto-card">
                     <div class="product-image-container">
-                        <img src="imagen1.png" alt="MacBook Pro 16 M3 Max">
+                        <img src="/static/imagen1.png" alt="MacBook Pro 16 M3 Max">
                     </div>
                     <div class="card-content">
                         <h3>MacBook Pro 16" (M3 Max)</h3>
@@ -75,7 +75,7 @@
                 <!-- Laptop 2 -->
                 <article class="producto-card">
                     <div class="product-image-container">
-                        <img src="imagen2.png" alt="Dell XPS 16">
+                        <img src="/static/imagen2.png" alt="Dell XPS 16">
                     </div>
                     <div class="card-content">
                         <h3>Dell XPS 16</h3>
@@ -104,7 +104,7 @@
                 <!-- Laptop 3 -->
                 <article class="producto-card">
                     <div class="product-image-container">
-                        <img src="imagen3.png" alt="ASUS ROG Strix Scar 18">
+                        <img src="/static/imagen3.png" alt="ASUS ROG Strix Scar 18">
                     </div>
                     <div class="card-content">
                         <h3>ASUS ROG Strix Scar 18</h3>
@@ -133,7 +133,7 @@
                 <!-- Laptop 4 -->
                 <article class="producto-card">
                     <div class="product-image-container">
-                        <img src="imagen4.png" alt="Lenovo ThinkPad X1 Carbon Gen 12">
+                        <img src="/static/imagen4.png" alt="Lenovo ThinkPad X1 Carbon Gen 12">
                     </div>
                     <div class="card-content">
                         <h3>Lenovo ThinkPad X1 Carbon Gen 12</h3>
@@ -162,7 +162,7 @@
                 <!-- Laptop 5 -->
                 <article class="producto-card">
                     <div class="product-image-container">
-                        <img src="imagen5.png" alt="MSI Summit E16 AI Studio">
+                        <img src="/static/imagen5.png" alt="MSI Summit E16 AI Studio">
                     </div>
                     <div class="card-content">
                         <h3>MSI Summit E16 AI Studio</h3>
@@ -196,6 +196,6 @@
     <footer>
         <p>&copy; 2025 Vortex Tech. Todos los derechos reservados.</p>
     </footer>
-    <script src="laptops.js"></script>
+    <script src="{{ url_for('static', filename='laptops.js') }}"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tablets de Alto Rendimiento - Vortex Tech</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilostablets.css"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilostablets.css') }}">
 </head>
 <body>  
     <header class="main-header">
@@ -41,7 +41,7 @@
                 
                 <article class="producto-card">
                     <div class="badge">Lo más potente</div>
-                    <img src="padpro4.png" alt="iPad Pro M4">
+                    <img src="/static/padpro4.png" alt="iPad Pro M4">
                     <div class="card-content">
                         <h3>iPad Pro M4 (13")</h3>
                         <p>La tablet más delgada de Apple con el chip M4, ofreciendo un rendimiento asombroso y una pantalla Ultra Retina XDR.</p>
@@ -66,7 +66,7 @@
 
                 <article class="producto-card">
                     <div class="badge">Pantalla Gigante</div>
-                    <img src="tabs10.png" alt="Galaxy Tab S10 Ultra">
+                    <img src="/static/tabs10.png" alt="Galaxy Tab S10 Ultra">
                     <div class="card-content">
                         <h3>Samsung Galaxy Tab S10 Ultra</h3>
                         <p>Diseñada para la productividad masiva con funciones de Inteligencia Artificial (Galaxy AI) integradas.</p>
@@ -96,6 +96,6 @@
     <footer>
         <p>&copy; 2025 Vortex Tech. Todos los derechos reservados.</p>
     </footer>
-    <script src="tablets.js"></script>
+    <script src="{{ url_for('static', filename='tablets.js') }}"></script>
 </body>
 </html>

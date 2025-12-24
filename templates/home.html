@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vortex Tech - Tecnología de Vanguardia</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estiloshome.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estiloshome.css') }}">
 </head>
 <body>
     <header class="main-header">
@@ -41,7 +41,7 @@
             <div class="productos-grid">
                 
                 <article class="producto-card">
-                    <div class="card-image-container"><img src="celularestendencia.jpg" alt="Celulares en tendencia" loading="lazy"></div>
+                    <div class="card-image-container"><img src="/static/celularestendencia.jpg" alt="Celulares en tendencia" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Celulares</h3>
                         <p>Amplia variedad de celulares con las últimas tecnologías y características avanzadas. ¡Descubre el futuro en tus manos!</p>
@@ -49,7 +49,7 @@
                 </article>
                 
                 <article class="producto-card">
-                    <div class="card-image-container"><img src="televisorestendencia.avif" alt="Televisores inteligentes" loading="lazy"></div>
+                    <div class="card-image-container"><img src="/static/televisorestendencia.avif" alt="Televisores inteligentes" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Televisores</h3>
                         <p>Resoluciones impresionantes y calidad de imagen excepcional para una experiencia de entretenimiento inigualable en tu hogar.</p>
@@ -57,7 +57,7 @@
                 </article>
                 
                 <article class="producto-card">
-                    <div class="card-image-container"><img src="laptopstendencia.jpg" alt="Laptops potentes y portátiles" loading="lazy"></div>
+                    <div class="card-image-container"><img src="/static/laptopstendencia.jpg" alt="Laptops potentes y portátiles" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Laptops</h3>
                         <p>Potentes, portátiles y diseñadas para satisfacer las necesidades de profesionales y entusiastas de la tecnología. ¡Rendimiento sin límites!</p>
@@ -65,7 +65,7 @@
                 </article>
                 
                 <article class="producto-card">
-                    <div class="card-image-container"><img src="tabletstendencia.avif" alt="Tablets versátiles" loading="lazy"></div>
+                    <div class="card-image-container"><img src="/static/tabletstendencia.avif" alt="Tablets versátiles" loading="lazy"></div>
                     <div class="card-content">
                         <h3>Tablets</h3>
                         <p>Combinan portabilidad y rendimiento, ofreciendo una experiencia versátil para el trabajo, el estudio y el entretenimiento.</p>
@@ -98,6 +98,6 @@
         <p>&copy; 2025 Vortex Tech. Todos los derechos reservados.</p>
         <p>Contacto: info@vortextech.com | Términos y Condiciones</p>
     </footer>
-    <script src="home.js"></script>
+    <script src="{{ url_for('static', filename='home.js') }}"></script>
 </body>
 </html>
