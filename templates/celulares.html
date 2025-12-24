@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Celulares en Tendencia - Vortex Tech</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estiloscelulares.css"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='estiloscelulares.css') }}">
 </head>
 <body>  
     <header class="main-header">
         <div class="logo">Vortex<span class="logo-pro">Tech</span></div>
         <nav class="main-nav">
             <ul>
-                <li><a href="../home/home.html">Home</a></li>
-                <li><a href="celulares.html" class="active">Celulares</a></li>
-                <li><a href="../televisores/televisores.html">Televisores</a></li>
-                <li><a href="../laptops/laptops.html">Laptops</a></li>
-                <li><a href="../tablets/tablets.html">Tablets</a></li>
-                <li><a href="../login/login.html">Login</a></li>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/celulares" class="active">Celulares</a></li>
+                <li><a href="/televisores">Televisores</a></li>
+                <li><a href="/laptops">Laptops</a></li>
+                <li><a href="/tablets">Tablets</a></li>
+                <li><a href="/">Login</a></li>
             </ul>
         </nav>
         <a href="#catalogo" class="header-cta-button">Ver Ofertas</a>
@@ -183,6 +183,7 @@
     <footer>
         <p>&copy; 2025 Vortex Tech. Todos los derechos reservados.</p>
     </footer>
-    <script src="celulares.js"></script>
+    <script src="celulares.js
+    "></script>
 </body>
 </html>
